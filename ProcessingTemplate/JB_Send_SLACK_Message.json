@@ -1,0 +1,43 @@
+{
+  "description": "Slack Direct Message to User",
+  "endpoint": "REST_SLACK_Endpoint",
+  "endpointType": "REST_WEB_SERVICE",
+  "folder": "",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "REST_Data_Calls",
+  "owner": "adam.keeling",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "REST_WEB_SERVICE",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "REST_WEB_SERVICE_CALL",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "headers": "Authorization= Bearer ${ak_slack_user_token}",
+    "method": "POST",
+    "parameters": "channel=D08M6AK8B51\ntext=Hello Jim - this is a direct message from your ANOW demo system :)",
+    "responseBodyVariable": "RESP_Slack",
+    "responseHeaderPrefix": "HEAD_Slack_",
+    "resultVariableLevel": "ROOT",
+    "saveResponseBody": true,
+    "saveResponseHeaders": true,
+    "url": "chat.postMessage"
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "OUTPUT",
+      "name": "Ticker_Check",
+      "outputFormat": "JSON",
+      "title": "Ticker_Symbol",
+      "outputDefinition": {
+        "dataPath": "$.ticker",
+        "outputLevel": "PARENT"
+      }
+    }
+  ]
+}

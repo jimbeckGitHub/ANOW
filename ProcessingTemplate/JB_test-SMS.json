@@ -1,0 +1,23 @@
+{
+  "endpoint": "ADKE_Mail",
+  "endpointType": "EMAIL",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "ADKE_Email_Node",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "EMAIL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "EMAIL_SEND",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "content": "hey Adam",
+    "contentType": "TEXT",
+    "subject": "TEST SMS from ANOW!",
+    "to": "+7574164425@vtext.com"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SET_PHYSICAL_RESOURCE",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "operator": "TIMES_NUM",
+    "resource": "Node_Test",
+    "value": 5
+  }
+}

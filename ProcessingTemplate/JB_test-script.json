@@ -1,0 +1,21 @@
+{
+  "eagerScriptExecution": true,
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "postScript": ":print \"date is &date and time is &time,, says job &job\"\n!!\n!! Look for nohup.out in job report\n!!\n:SET &HND# = PREP_PROCESS_REPORT(\"JOBS\",, \"REP\", \"*nohup.out*\")\n:PROCESS &HND#\n:   SET &RET# = GET_PROCESS_LINE(&HND#)\n:   PRINT \"line in output containg the string you searched for: &RET#\"\n:ENDPROCESS",
+  "preScript": ":put_att host=SVA_DEMO\n:put_att OBJECT_TITLE=SVA_DEMO\n:put_att ARCHIVE_KEY2=SVA_DEMO\n!! comments can be added\n!\n:set &date = sys_date('MM/DD/YYYY')\n:set &time = sys_time()\n:set &job = sys_act_me_name()\n!",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "useScripts": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "echo job is executing on ${serverNode}\n\npwd\n\nls -al\n\n"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "FILE_MANAGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "FILE_TRANSFER",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  }
+}

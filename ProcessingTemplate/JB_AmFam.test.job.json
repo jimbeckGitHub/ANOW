@@ -1,0 +1,20 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "SVA_DEMO",
+  "owner": "james.beck",
+  "preScript": ":SET &DATE = SYS_DATE()\n:SET &TIME = SYS_TIME()\n!\n:PRINT 'Date is &DATE and time is &TIME'",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "useScripts": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "pwd\n\nls -al\n\necho ${currentDateYYYYMMDD}"
+  }
+}

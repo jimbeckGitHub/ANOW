@@ -1,0 +1,24 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "monitorType": "SH_MONITOR",
+  "node": "SVA_DEMO",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "SERVICE",
+  "serverNodeType": "LINUX",
+  "serviceType": "MONITOR",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "output='df -h'\n  usep=$(echo $output | awk '{ print $1}' | cut -d'%' -f1 )\n  echo $usep\n  \necho \"ANOWVAR:ROOT.Space_Used=${usep}\"",
+    "serviceMode": {
+      "duration": 2592000000,
+      "interval": 3600000,
+      "runMode": "FOR"
+    }
+  }
+}

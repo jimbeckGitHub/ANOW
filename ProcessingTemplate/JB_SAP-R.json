@@ -1,0 +1,14 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "SAP",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SAP_R3_JOB",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  }
+}

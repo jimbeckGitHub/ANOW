@@ -1,0 +1,20 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "postScript": ":SET &KEY# = '0'\n!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! Process file temp.txt in c:\\temp           !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!\n:SET &FILE# = PREP_PROCESS_FILE(JB-Windows-local, \"C:\\temp\\temp.txt\",,\"COL=DELIMITER,DELIMITER=*;*\")\n:PROCESS &FILE#\n:   SET &LINE# = GET_PROCESS_LINE(&FILE#)\n:   SET &Value1# = GET_PROCESS_LINE(&FILE#,1)\n:   SET &Value2# = GET_PROCESS_LINE(&FILE#,2)\n:   SET &Value3# = GET_PROCESS_LINE(&FILE#,3)\n:   SET &Value4# = GET_PROCESS_LINE(&FILE#,4)\n!\n:   PRINT 'Values from temp.txt: &Value1#,, &Value2#,, &Value3#,, &Value4#'\n:   PUT_VAR JABE-Key-Value-Store, &KEY#, &Value1#, &Value2#, &Value3#, &Value4#\n!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! Increment the KEY & format it, removing leading zeroes  !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n:   SET &KEY# = ADD(&KEY#,'1')\n:   SET &KEY# = FORMAT(&KEY#)\n:   PRINT 'Key is &KEY#'\n:ENDPROCESS\n\n",
+  "preScript": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! Dynamically set the node versus selected on atrributes tab !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!\n\n:PUT_ATT HOST = \"JB-Windows-local\"\n!\n:SET &DATE = SYS_DATE(\"MM/DD/YYYY\")\n:SET &TIME = SYS_TIME(\"HH:MM:SS\")\n:SET &JOBNAME = SYS_ACT_ME_NAME()\n!\n",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SHELL_SCRIPT",
+  "useScripts": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "cd c:\\temp\ndir\nmore temp.txt\n\n:PRINT 'Date is &DATE; Time is &TIME; says job &JOBNAME'"
+  }
+}

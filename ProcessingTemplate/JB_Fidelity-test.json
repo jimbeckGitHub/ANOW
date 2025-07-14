@@ -1,0 +1,18 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "SVA_DEMO",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "cd /\npwd\n\nls -ltr\n\necho Hello Fidelity\n\necho ANOWVAR:SELF.message=Hello Fideilty team\n\ndf -H\noutput='df -h | grep '/dev/mapper/ol-root' | awk '{ print $5}' '\n  usep=$(echo $output | awk '{ print $1}' | cut -d'%' -f1 )\n  echo $usep\n  \necho \"ANOWVAR:ROOT.Space_Used=${usep}\""
+  }
+}

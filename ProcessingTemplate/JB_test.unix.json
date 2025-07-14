@@ -1,0 +1,21 @@
+{
+  "endpoint": "SVA_LINUX_AGENT",
+  "endpointType": "SSH",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "SVA_DEMO",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "title": "This is a JB test job",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "pwd\n\nls -al\n\necho my unix job"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "PEOPLESOFT",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "PEOPLESOFT_APPLICATION_ENGINE_TASK",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  }
+}

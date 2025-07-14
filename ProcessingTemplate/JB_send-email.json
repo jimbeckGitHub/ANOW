@@ -1,0 +1,24 @@
+{
+  "endpoint": "JABE-Gmail",
+  "endpointType": "EMAIL",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "JABE-Email",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "EMAIL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "EMAIL_SEND",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "cc": "jimebay@yahoo.com",
+    "content": "EMAIL sent from ANOW, domain SVA",
+    "contentType": "TEXT",
+    "subject": "ANOW email",
+    "to": "james.beck@betasystems.com"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "JB-WIndows-local",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "F:\\\n\nrem cd - the location where DTEXEC is.\n\nDTEXEC.EXE /DTS \"\\MSDB\\OnBase\\OnBase_FA_Stage_Held_Transfers\" /SERVER SSIS2201DEV /DECRYPT yourpassword /CHECKPOINTING OFF  /REPORTING V"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "endpoint": "ANOW_DB_Postgre_Backend",
+  "endpointType": "POSTGRESQL",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "JB-PostGreSQL",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "POSTGRESQL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "RDBMS_SQL_STATEMENT",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "resultCsvTextQualifier": "",
+    "rowsMax": 100,
+    "rowsMin": 1,
+    "rowsVariableLevel": "SELF",
+    "selectResultAction": "SYSOUT",
+    "statement": "SELECT domain as DomainName, COUNT(*) AS EXECUTIONS FROM anow.processing\nWHERE  \n(processing_type IN ('TASK', 'SERVICE') OR trigger_type='SELF_SERVICE')\ngroup by DomainName;",
+    "statementType": "SELECT"
+  }
+}

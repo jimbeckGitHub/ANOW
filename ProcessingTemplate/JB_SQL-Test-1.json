@@ -1,0 +1,22 @@
+{
+  "endpoint": "ADKE_PostgreSQL_Demo_Data",
+  "endpointType": "POSTGRESQL",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "ADKE_PsgSQL",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "POSTGRESQL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "RDBMS_SQL",
+  "title": "Jim PostGreSQL task",
+  "verboseMode": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "SELECT * FROM public.actor\nORDER BY actor_id ASC "
+  }
+}

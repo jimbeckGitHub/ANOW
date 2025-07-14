@@ -1,0 +1,56 @@
+{
+  "description": "test",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "SVA_DEMO",
+  "owner": "james.beck",
+  "postScript": ":Print 'date is &AE_Date, physical date is &Phy_date'\n:print 'time is &time'\n:print 'job is &me and parent is &parent'\n!\n:set &act = activate_uc_object(JB_activated,,,,,PASS_VALUES)\n:print 'return code of activate is &act'",
+  "preScript": ":Put_att host='SVA_DEMO'\n!\n:set &AE_Date = sys_date(\"MM/DD/YYYY\")\n:set &Phy_date = sys_date_physical(\"MM/DD/YYYY\")\n:set &time = sys_time()\n:set &me = sys_act_me_name()\n:set &parent = sys_act_parent_name()\n!\n\n!:set &date = sys_date('MM/DD/YYYY')\n!:print 'date is &date'\n!:if &date <> '01/15/2025'\n!:  print 'exit job w/o execution'\n!:  stop nomsg,01\n!:endif\n",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "useScripts": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "mkdir /tmp/GitHub/\n\ncd /tmp\n\nls -al\n\npwd\n\nwhoami\n\necho date is ${currentDateYY}\n"
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "NUMBER",
+      "name": "Number",
+      "required": true,
+      "title": "Select a number"
+    },
+    {
+      "editorType": "DATE",
+      "name": "Date",
+      "required": true,
+      "title": "Select Date"
+    },
+    {
+      "editorType": "OUTPUT",
+      "name": "auto",
+      "outputFormat": "AUTO",
+      "title": "testing auto output parser"
+    },
+    {
+      "editorType": "OUTPUT",
+      "name": "text",
+      "outputFormat": "TEXT",
+      "title": "text found in report",
+      "outputDefinition": {
+        "linePattern": "number",
+        "linePatternOperator": "STARTS_WITH",
+        "outputLevel": "ROOT",
+        "valueEndOperator": "LINE_END",
+        "valueStartOperator": "LINE_START"
+      }
+    }
+  ]
+}

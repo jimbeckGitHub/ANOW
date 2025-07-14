@@ -1,0 +1,22 @@
+{
+  "eagerScriptExecution": true,
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "JB-WIndows-local",
+  "owner": "james.beck",
+  "preScript": "!\n:put_att OBJECT_TITLE='set via pre-script of job'\n:put_att ARCHIVE_KEY2='set via pre-script of job'",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SHELL_SCRIPT",
+  "title": "Node is ${serverNode}",
+  "useScripts": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "script": "cd\ndir\n"
+  }
+}

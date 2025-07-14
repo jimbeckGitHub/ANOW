@@ -1,0 +1,21 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "DATA_SOURCE_SET",
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "contextVariableLevel": "SELF",
+    "dataSource": "City_Locations",
+    "dataSourceType": "LOCAL_KEY_VALUE_STORE",
+    "key": "2",
+    "value": "Denver"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "endpoint": "ANOW_DB_Postgre_Backend",
+  "endpointType": "POSTGRESQL",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "ADKE_PsgSQL",
+  "owner": "james.beck",
+  "priority": "0",
+  "processingType": "SERVICE",
+  "sensorType": "SQL_SENSOR",
+  "serverNodeType": "POSTGRESQL",
+  "serviceType": "SENSOR",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "verboseMode": true,
+  "customFieldValues": {
+    "Example_Checkbox": "No"
+  },
+  "processingCommand": {
+    "finishAfterFirstReaction": true,
+    "maxCounter": 1000,
+    "minCounter": 1,
+    "noItemFoundAction": "COMPLETE_AFTER_LAST_CHECK",
+    "processingTemplate": "JB_send-email",
+    "reactionType": "ADD_PROCESSING",
+    "senseValue": "COUNTER",
+    "serviceMode": {
+      "counter": 5,
+      "interval": 70000,
+      "runMode": "COUNTER"
+    },
+    "sqlQuery": "SELECT * FROM public.actor\nORDER BY actor_id ASC ",
+    "timestampBaseDate": "PROCESSING_TIMESTAMP"
+  }
+}
