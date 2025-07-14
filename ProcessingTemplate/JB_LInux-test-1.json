@@ -17,7 +17,7 @@
     "Example_Checkbox": "No"
   },
   "processingCommand": {
-    "script": "mkdir /tmp/GitHub/\n\ncd /tmp\n\nls -al\n\npwd\n\nwhoami\n\necho date is ${currentDateYY}\n"
+    "script": "cd /tmp/GitHub\n\nls -al\n\npwd\n\nwhoami\n\necho date is ${currentDateYY}\n"
   },
   "designParameters": 
   [
