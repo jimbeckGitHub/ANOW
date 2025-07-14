@@ -17,7 +17,7 @@
     "Example_Checkbox": "No"
   },
   "processingCommand": {
-    "script": "cd /tmp/GitHub\n\nls -al\n\npwd\n\nwhoami\n\necho date is ${currentDateYY}\n"
+    "script": "cd /tmp/GitHub\necho \"added this in ANOW to see if it shows in GitHub\"\nls -al\n\npwd\n\nwhoami\n\necho date is ${currentDateYY}\n"
   },
   "designParameters": 
   [
